@@ -18,14 +18,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     var userPickedArtist = ""
     
+    // 이름 하드코딩한거 리팩토링하자
     let mlModels = [
-        "Monet": GalleryStyleTransferMonet().model,
-        "Degas": GalleryStyleTransferRenoir().model,
-        "Renoir": GalleryStyleTransferVanGogh().model,
-        "Manet": GalleryStyleTransferDegas().model,
-        "Cassat": GalleryStyleTransferManet().model,
-        "Morisot": GalleryStyleTransferCezanne().model,
-        "Sisley": GalleryStyleTransferMatisse().model
+        "Monet": MyStyleTransferMonet().model,
+        "Degas": MyStyleTransferDegas().model,
+        "Renoir": MyStyleTransferRenoir().model,
+        "Manet": MyStyleTransferManet().model,
+        "Pissaro": MyStyleTransferPissaro().model,
+        "Cassatt": MyStyleTransferCassat().model,
+        "Morisot": MyStyleTransferMorisot().model,
+        "Sisley": MyStyleTransferSisley().model
     ]
     
     override func viewDidLoad() {
@@ -100,9 +102,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             destinationVC.image = imageView.image
         }
     }
-    
-    
-    
     
 }
 
