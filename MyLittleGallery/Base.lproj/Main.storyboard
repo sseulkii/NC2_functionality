@@ -60,10 +60,18 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="A74-2v-NPq">
-                                        <rect key="frame" x="125.5" y="57" width="288.5" height="31"/>
+                                        <rect key="frame" x="18" y="57" width="396" height="31"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rh-cj-5cv">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5g-TW-aQn">
                                                 <rect key="frame" x="0.0" y="0.0" width="73.5" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Pissaro"/>
+                                                <connections>
+                                                    <action selector="addPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ck-dP-iu7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rh-cj-5cv">
+                                                <rect key="frame" x="107.5" y="0.0" width="73.5" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Cassatt"/>
                                                 <connections>
@@ -71,7 +79,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGT-14-oFs">
-                                                <rect key="frame" x="107.5" y="0.0" width="73.5" height="31"/>
+                                                <rect key="frame" x="215" y="0.0" width="73.5" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Morisot"/>
                                                 <connections>
@@ -79,7 +87,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxn-c8-7g0">
-                                                <rect key="frame" x="215" y="0.0" width="73.5" height="31"/>
+                                                <rect key="frame" x="322.5" y="0.0" width="73.5" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Sisley"/>
                                                 <connections>
