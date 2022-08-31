@@ -13,7 +13,7 @@
 		1114B93028BC80B3007D6D21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1114B92E28BC80B3007D6D21 /* Main.storyboard */; };
 		1114B93228BC80B5007D6D21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1114B93128BC80B5007D6D21 /* Assets.xcassets */; };
 		1114B93528BC80B5007D6D21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1114B93328BC80B5007D6D21 /* LaunchScreen.storyboard */; };
-		112B525D28BCA72D0073747B /* GalleryStyleTransfer.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 112B525C28BCA72D0073747B /* GalleryStyleTransfer.mlmodel */; };
+		11DF55E628BF38D1003AF4D3 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DF55E528BF38D1003AF4D3 /* GalleryViewController.swift */; };
 		11EF668D28BE3FE9006FEA17 /* GalleryStyleTransferMatisse.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 11EF668628BE3FE9006FEA17 /* GalleryStyleTransferMatisse.mlmodel */; };
 		11EF668E28BE3FE9006FEA17 /* GalleryStyleTransferDegas.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 11EF668728BE3FE9006FEA17 /* GalleryStyleTransferDegas.mlmodel */; };
 		11EF668F28BE3FE9006FEA17 /* GalleryStyleTransferRenoir.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 11EF668828BE3FE9006FEA17 /* GalleryStyleTransferRenoir.mlmodel */; };
@@ -32,7 +32,7 @@
 		1114B93128BC80B5007D6D21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1114B93428BC80B5007D6D21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1114B93628BC80B5007D6D21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		112B525C28BCA72D0073747B /* GalleryStyleTransfer.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GalleryStyleTransfer.mlmodel; sourceTree = "<group>"; };
+		11DF55E528BF38D1003AF4D3 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		11EF668628BE3FE9006FEA17 /* GalleryStyleTransferMatisse.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GalleryStyleTransferMatisse.mlmodel; sourceTree = "<group>"; };
 		11EF668728BE3FE9006FEA17 /* GalleryStyleTransferDegas.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GalleryStyleTransferDegas.mlmodel; sourceTree = "<group>"; };
 		11EF668828BE3FE9006FEA17 /* GalleryStyleTransferRenoir.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GalleryStyleTransferRenoir.mlmodel; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 				1114B92828BC80B3007D6D21 /* AppDelegate.swift */,
 				1114B92A28BC80B3007D6D21 /* SceneDelegate.swift */,
 				1114B92C28BC80B3007D6D21 /* ViewController.swift */,
-				112B525C28BCA72D0073747B /* GalleryStyleTransfer.mlmodel */,
+				11DF55E528BF38D1003AF4D3 /* GalleryViewController.swift */,
 				11EF668B28BE3FE9006FEA17 /* GalleryStyleTransferCezanne.mlmodel */,
 				11EF668728BE3FE9006FEA17 /* GalleryStyleTransferDegas.mlmodel */,
 				11EF668A28BE3FE9006FEA17 /* GalleryStyleTransferManet.mlmodel */,
@@ -162,13 +162,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11DF55E628BF38D1003AF4D3 /* GalleryViewController.swift in Sources */,
 				11EF668D28BE3FE9006FEA17 /* GalleryStyleTransferMatisse.mlmodel in Sources */,
 				11EF668E28BE3FE9006FEA17 /* GalleryStyleTransferDegas.mlmodel in Sources */,
 				11EF669128BE3FE9006FEA17 /* GalleryStyleTransferManet.mlmodel in Sources */,
 				1114B92D28BC80B3007D6D21 /* ViewController.swift in Sources */,
 				1114B92928BC80B3007D6D21 /* AppDelegate.swift in Sources */,
 				11EF668F28BE3FE9006FEA17 /* GalleryStyleTransferRenoir.mlmodel in Sources */,
-				112B525D28BCA72D0073747B /* GalleryStyleTransfer.mlmodel in Sources */,
 				11EF669028BE3FE9006FEA17 /* GalleryStyleTransferMonet.mlmodel in Sources */,
 				11EF669328BE3FE9006FEA17 /* GalleryStyleTransferVanGogh.mlmodel in Sources */,
 				1114B92B28BC80B3007D6D21 /* SceneDelegate.swift in Sources */,

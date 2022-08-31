@@ -29,41 +29,62 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="65.5" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Monet"/>
+                                                <connections>
+                                                    <action selector="addPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uOV-ZU-pfd"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHT-H7-deY">
                                                 <rect key="frame" x="93.5" y="0.0" width="65.5" height="31"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Gogh"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Degas"/>
+                                                <connections>
+                                                    <action selector="addPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5zo-Lr-jIv"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9f-WG-hjZ">
                                                 <rect key="frame" x="187" y="0.0" width="65.5" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Renoir"/>
+                                                <connections>
+                                                    <action selector="addPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jMs-XW-hfa"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrE-wG-3xh">
                                                 <rect key="frame" x="280.5" y="0.0" width="65.5" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Manet"/>
+                                                <connections>
+                                                    <action selector="addPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ygG-t8-aZn"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="A74-2v-NPq">
-                                        <rect key="frame" x="103" y="57" width="311" height="31"/>
+                                        <rect key="frame" x="125.5" y="57" width="288.5" height="31"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rh-cj-5cv">
-                                                <rect key="frame" x="0.0" y="0.0" width="81" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="73.5" height="31"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Cezanne"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Cassatt"/>
+                                                <connections>
+                                                    <action selector="addPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lpO-Ay-e7o"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGT-14-oFs">
-                                                <rect key="frame" x="115" y="0.0" width="81" height="31"/>
+                                                <rect key="frame" x="107.5" y="0.0" width="73.5" height="31"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Matisse"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Morisot"/>
+                                                <connections>
+                                                    <action selector="addPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Y4-c2-5V2"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxn-c8-7g0">
-                                                <rect key="frame" x="230" y="0.0" width="81" height="31"/>
+                                                <rect key="frame" x="215" y="0.0" width="73.5" height="31"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Degas"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Sisley"/>
+                                                <connections>
+                                                    <action selector="addPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eDv-3X-JQv"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -84,9 +105,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Artpiece" id="2wh-Ai-AGp">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lYP-p9-T9E">
+                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="Chx-Rx-dRU">
                             <connections>
-                                <action selector="addPhoto:" destination="BYZ-38-t0r" id="9fh-XK-5aD"/>
+                                <action selector="showOnWall:" destination="BYZ-38-t0r" id="1VQ-T7-ZAb"/>
+                                <segue destination="7mf-rf-MgU" kind="show" identifier="toARView" id="Aic-yj-5C9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -97,6 +119,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="97.767857142857139"/>
+        </scene>
+        <!--Gallery View Controller-->
+        <scene sceneID="EVd-cx-NJg">
+            <objects>
+                <viewController id="7mf-rf-MgU" customClass="GalleryViewController" customModule="MyLittleGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uiJ-hV-Jty">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xhG-EL-J8I">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </arscnView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NBs-hi-cgh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xhG-EL-J8I" firstAttribute="top" secondItem="NBs-hi-cgh" secondAttribute="top" id="9ij-e3-FB3"/>
+                            <constraint firstItem="xhG-EL-J8I" firstAttribute="leading" secondItem="NBs-hi-cgh" secondAttribute="leading" id="MPa-Kc-Eth"/>
+                            <constraint firstAttribute="bottom" secondItem="xhG-EL-J8I" secondAttribute="bottom" id="Tto-PX-69e"/>
+                            <constraint firstItem="xhG-EL-J8I" firstAttribute="trailing" secondItem="NBs-hi-cgh" secondAttribute="trailing" id="cNF-eU-QhA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Rb-fq-rkh"/>
+                    <connections>
+                        <outlet property="sceneView" destination="xhG-EL-J8I" id="zXD-8c-yan"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uwI-tP-tzg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1944.9275362318842" y="97.767857142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OcO-Jo-O1L">

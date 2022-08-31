@@ -16,7 +16,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     let imagePicker = UIImagePickerController()
     
-    let mlModels = [GalleryStyleTransferMonet().model, GalleryStyleTransferRenoir().model, GalleryStyleTransferVanGogh().model, GalleryStyleTransferDegas().model, GalleryStyleTransferManet().model, GalleryStyleTransferCezanne().model, GalleryStyleTransferMatisse().model]
+    var userPickedArtist = ""
+    
+    let mlModels = [
+        "Monet": GalleryStyleTransferMonet().model,
+        "Degas": GalleryStyleTransferRenoir().model,
+        "Renoir": GalleryStyleTransferVanGogh().model,
+        "Manet": GalleryStyleTransferDegas().model,
+        "Cassat": GalleryStyleTransferManet().model,
+        "Morisot": GalleryStyleTransferCezanne().model,
+        "Sisley": GalleryStyleTransferMatisse().model
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +37,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
         if let userPickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageView.image = userPickedImage
             
@@ -35,8 +44,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 fatalError("could not convert to CIImage")
             }
             
-            convert(image: ciImage, transferModel: mlModels[0]) //
-//            convert(image: ciImage, transferModel: GalleryStyleTransferRenoir().model)
+            guard let artistModel = mlModels[userPickedArtist] else {
+                fatalError("could not convert mlmodel")
+            }
+            convert(image: ciImage, transferModel: artistModel)
+
         }
         
         imagePicker.dismiss(animated: true)
@@ -70,9 +82,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-    @IBAction func addPhoto(_ sender: UIBarButtonItem) {
+    @IBAction func addPressed(_ sender: UIButton) {
         present(imagePicker, animated: true, completion: nil)
+        userPickedArtist = (sender.titleLabel?.text)!
+        
     }
+    
+    
+
+    @IBAction func showOnWall(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "toARView", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toARView" {
+            let destinationVC = segue.destination as! GalleryViewController
+            destinationVC.image = imageView.image
+        }
+    }
+    
+    
+    
     
 }
 
