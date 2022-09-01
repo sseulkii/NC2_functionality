@@ -8,6 +8,7 @@
 import UIKit
 import ARKit
 
+// https://stackoverflow.com/questions/51888939/place-image-from-gallery-on-a-wall-using-arkit
 // 액자 넣고 싶당
 class GalleryViewController: UIViewController, ARSCNViewDelegate {
 
@@ -37,11 +38,10 @@ class GalleryViewController: UIViewController, ARSCNViewDelegate {
                 return
             }
             
-            let width = CGFloat(planeAnchor.extent.x)
-            let height = CGFloat(planeAnchor.extent.z)
+            let width = CGFloat(image!.size.width * 0.002)
+            let height = CGFloat(image!.size.height * 0.002)
             
             additionalNode = SCNNode(geometry: SCNPlane(width: width, height: height))
-            // width, height 그림에 맞춰야할듯
             
             additionalNode?.eulerAngles.x = -.pi / 2
             

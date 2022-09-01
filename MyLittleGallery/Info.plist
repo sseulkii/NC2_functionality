@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Please enable it to hang it on the wall.</string>
+	<string>Please enable it to hang the picture on the wall.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Please enable it to select photo.</string>
 	<key>UIApplicationSceneManifest</key>

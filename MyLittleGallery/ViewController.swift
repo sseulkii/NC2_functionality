@@ -14,6 +14,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     @IBOutlet weak var imageView: UIImageView!
     
+    var pickedImage: UIImage?
+    
     let imagePicker = UIImagePickerController()
     
     var userPickedArtist = ""
@@ -72,6 +74,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
             
             self.imageView.image = UIImage(pixelBuffer: image)
+            self.pickedImage = UIImage(pixelBuffer: image)
             
         }
         
@@ -99,15 +102,30 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toARView" {
             let destinationVC = segue.destination as! GalleryViewController
-            destinationVC.image = imageView.image
+            if let image = pickedImage {
+                destinationVC.image = image
+            }
         }
     }
     
     @IBAction func savePressed(_ sender: UIBarButtonItem) {
-        guard let imageToSave = imageView.image else {
-            fatalError("could not save image")
+        // guard문으로
+        
+        if let imageToSave = pickedImage {
+            UIImageWriteToSavedPhotosAlbum(imageToSave, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
         }
-        UIImageWriteToSavedPhotosAlbum(imageToSave, nil, nil, nil)
+    }
+    
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if error != nil {
+            let alert = UIAlertController(title: "Error", message: "There was an error saving your image.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alert, animated: true)
+        } else {
+            let alert = UIAlertController(title: "Image Saved", message: "Your image has been saved in your photo library.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alert, animated: true)
+        }
     }
     
 }
