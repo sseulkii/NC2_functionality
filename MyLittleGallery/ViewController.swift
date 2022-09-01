@@ -103,6 +103,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    @IBAction func savePressed(_ sender: UIBarButtonItem) {
+        guard let imageToSave = imageView.image else {
+            fatalError("could not save image")
+        }
+        UIImageWriteToSavedPhotosAlbum(imageToSave, nil, nil, nil)
+    }
+    
 }
 
 extension UIImage {
