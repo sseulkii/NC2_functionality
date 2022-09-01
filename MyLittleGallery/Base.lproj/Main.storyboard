@@ -113,11 +113,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Artpiece" id="2wh-Ai-AGp">
-                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="nn3-dK-MfP">
-                            <connections>
-                                <action selector="savePressed:" destination="BYZ-38-t0r" id="hSc-L2-u4o"/>
-                            </connections>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem systemItem="save" id="nn3-dK-MfP">
+                                <connections>
+                                    <action selector="savePressed:" destination="BYZ-38-t0r" id="hSc-L2-u4o"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" id="mhs-oB-B9j">
+                                <connections>
+                                    <action selector="imagePressed:" destination="BYZ-38-t0r" id="FbN-dB-bI5"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" systemItem="play" id="Chx-Rx-dRU">
                             <connections>
                                 <action selector="showOnWall:" destination="BYZ-38-t0r" id="1VQ-T7-ZAb"/>
@@ -127,6 +134,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="oHa-fp-YiD" id="Moh-eN-gzb"/>
+                        <segue destination="py0-If-cd8" kind="show" identifier="showImage" id="pvt-Us-2sH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -162,6 +170,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uwI-tP-tzg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1944.9275362318842" y="97.767857142857139"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="QpV-vF-LM7">
+            <objects>
+                <viewController id="py0-If-cd8" customClass="ImageViewController" customModule="MyLittleGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mCc-Ur-BuD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HI0-Tc-Mep">
+                                <rect key="frame" x="87" y="335" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="B47-Kc-clg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RAJ-Ja-nt0"/>
+                    <connections>
+                        <outlet property="image" destination="HI0-Tc-Mep" id="8ud-CL-XBt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ypW-GX-rjv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1945" y="847"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OcO-Jo-O1L">

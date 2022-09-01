@@ -21,6 +21,7 @@
 		113A5CC928BF799800081718 /* MyStyleTransferPissaro.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 113A5CC128BF799700081718 /* MyStyleTransferPissaro.mlmodel */; };
 		113A5CCA28BF799800081718 /* MyStyleTransferMonet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 113A5CC228BF799700081718 /* MyStyleTransferMonet.mlmodel */; };
 		113A5CCB28BF799800081718 /* MyStyleTransferSisley.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 113A5CC328BF799800081718 /* MyStyleTransferSisley.mlmodel */; };
+		11696B8128C0A88F00E02249 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11696B8028C0A88F00E02249 /* ImageViewController.swift */; };
 		11DF55E628BF38D1003AF4D3 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DF55E528BF38D1003AF4D3 /* GalleryViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		113A5CC128BF799700081718 /* MyStyleTransferPissaro.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MyStyleTransferPissaro.mlmodel; sourceTree = "<group>"; };
 		113A5CC228BF799700081718 /* MyStyleTransferMonet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MyStyleTransferMonet.mlmodel; sourceTree = "<group>"; };
 		113A5CC328BF799800081718 /* MyStyleTransferSisley.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MyStyleTransferSisley.mlmodel; sourceTree = "<group>"; };
+		11696B8028C0A88F00E02249 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		11DF55E528BF38D1003AF4D3 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 				1114B92A28BC80B3007D6D21 /* SceneDelegate.swift */,
 				1114B92C28BC80B3007D6D21 /* ViewController.swift */,
 				11DF55E528BF38D1003AF4D3 /* GalleryViewController.swift */,
+				11696B8028C0A88F00E02249 /* ImageViewController.swift */,
 				113A5CC028BF799700081718 /* MyStyleTransferCassat.mlmodel */,
 				113A5CBC28BF799600081718 /* MyStyleTransferDegas.mlmodel */,
 				113A5CBF28BF799700081718 /* MyStyleTransferManet.mlmodel */,
@@ -171,6 +174,7 @@
 				1114B92D28BC80B3007D6D21 /* ViewController.swift in Sources */,
 				113A5CC428BF799800081718 /* MyStyleTransferDegas.mlmodel in Sources */,
 				1114B92928BC80B3007D6D21 /* AppDelegate.swift in Sources */,
+				11696B8128C0A88F00E02249 /* ImageViewController.swift in Sources */,
 				113A5CCB28BF799800081718 /* MyStyleTransferSisley.mlmodel in Sources */,
 				113A5CC928BF799800081718 /* MyStyleTransferPissaro.mlmodel in Sources */,
 				113A5CC828BF799800081718 /* MyStyleTransferCassat.mlmodel in Sources */,

@@ -36,13 +36,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         
         imagePicker.delegate = self
-        imagePicker.allowsEditing = false
+        imagePicker.allowsEditing = true
         imagePicker.sourceType = .photoLibrary
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let userPickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            imageView.image = userPickedImage
+        if let userPickedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+//            imageView.image = userPickedImage
             
             guard let ciImage = CIImage(image: userPickedImage) else {
                 fatalError("could not convert to CIImage")
@@ -56,6 +56,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         
         imagePicker.dismiss(animated: true)
+        
     }
     
     func convert(image: CIImage, transferModel: MLModel) {
@@ -105,6 +106,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             if let image = pickedImage {
                 destinationVC.image = image
             }
+        } else if segue.identifier == "showImage" {
+            let destinationVC = segue.destination as! ImageViewController
+            destinationVC.imageSent = pickedImage
         }
     }
     
@@ -126,6 +130,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             alert.addAction(UIAlertAction(title: "OK", style: .default))
             present(alert, animated: true)
         }
+    }
+    
+    @IBAction func imagePressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "showImage", sender: self)
     }
     
 }
